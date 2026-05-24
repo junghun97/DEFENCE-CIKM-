@@ -2,21 +2,6 @@
 
 This is the official implementation of **DeFence** (*DEcoupled FEature aNChors for robust nodE classification*), submitted to CIKM 2026.
 
----
-## Abstract
-How can we accurately classify nodes in graphs when both labels and edges are corrupted?
-Such graphs are common in practice---fraud detection, citation, and bio-networks often exhibit both flipped node labels and spurious links.
-For example, in fraud detection, delayed adjudication yields label noise while collusive rings inject spurious transaction edges.
-However, most prior works tackle only one noise source, over-trusting structure for label noise and labels for edge noise; when both occur, these assumptions amplify each other's errors.
-In this paper, we propose DeFence, a feature-anchored node classification model under joint label-structure noise.
-DeFence first computes feature-only (pre-propagation) embeddings and clusters them to obtain soft anchors, explicitly decoupling their construction from message passing and supervision so that they remain in feature space and independent of noisy edges and labels.
-During training, we i) apply an anchor-filtered contrastive loss, using only anchor-consistent structural signal and thereby countering spurious links,
-ii) treat anchors as a soft prior to stabilize the posterior during propagation under joint noise,
-and iii) use gradient-matched supervision that keeps updates aligned with a clean reference signal to suppress mislabeled instances.
-Across standard benchmarks, DeFence consistently improves node classification accuracy over strong robust baselines.
-
----
-
 ## 📦 Requirements
 
 We recommend using the following versions:
